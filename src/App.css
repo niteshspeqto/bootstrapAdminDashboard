@@ -9,8 +9,16 @@
 .sidebar-container{
     width: 20%;
     height: 100vh;
-    background-color: #4A6FDC;
+    /* background-color: #4A6FDC; */
 }
 .app-container{
     width: 80%;
+}
+@media (max-width: 480px) {
+    .app-container{
+        width: 100%;
+    }
+    /* .sidebar-container{
+        width: 0;
+    } */
 }

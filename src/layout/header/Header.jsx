@@ -1,48 +1,56 @@
-import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Header.css";
-
 import {
-  faSearch,
   faBell,
   faEnvelope,
+  faSearch,
   faUser,
-  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+import "./Header.css";
+import { Button, Form } from "react-bootstrap";
 
-const Header = () => {
+function Header() {
   return (
-    <div className="header-container">
-      <Form className="header-left">
-        <Form.Control
-          type="text"
-          placeholder="Search for..."
-          className="mr-sm-2 search-input"
-        />
-        <Button variant="primary" className="search-button">
-          <FontAwesomeIcon icon={faSearch} style={{ color: "#ffffff" }} />
-        </Button>
-      </Form>
-      <div className="header-right">
-        <div>
-          <FontAwesomeIcon icon={faBell} style={{cursor:"pointer", color: "#c2c4c7" }} />
-        </div>
-        <div>
-          <FontAwesomeIcon icon={faEnvelope} style={{cursor:"pointer", color: "#C2C4C7" }} />
-        </div>
-        <div style={{ borderRight: "1px solid #C2C4C7", height:"40px" }}></div>
-        <div className="user-corner-header">
-          <div>Douglas McGee</div>
-        </div>
-        <div className="user-pic">
-          <FontAwesomeIcon icon={faUserCircle} size="lg" style={{cursor:"pointer", color: "#000" }} />
-        </div>
-      </div>
-    </div>
+    <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
+      <Container className="header-container">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto header-navs">
+            <Nav className="header-left">
+              <Form>
+                <Form.Control
+                  type="text"
+                  placeholder="Search for..."
+                  className="mr-sm-2 search-input"
+                />
+                <Button variant="primary" className="header-search-icon" >
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    style={{ color: "#ffffff" }}
+                  />
+                </Button>
+              </Form>
+            </Nav>
+            <Nav className="header-right">
+              <Nav.Item>
+                <FontAwesomeIcon icon={faBell} size="lg" />
+              </Nav.Item>
+              <Nav.Item>
+                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+              </Nav.Item>
+              <Nav.Item>User Name</Nav.Item>
+              <Nav.Item>
+                <FontAwesomeIcon icon={faUser} size="lg" />
+              </Nav.Item>
+            </Nav>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
 export default Header;

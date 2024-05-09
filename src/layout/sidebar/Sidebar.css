@@ -1,3 +1,37 @@
-/* .sidebar{
+/* Sidebar.css */
 
-} */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+a:hover {
+  color: #0000ff; /* #0ab4ff */
+  font-size: 1.1rem;
+}
+
+.menu-anchor:hover {
+  background-color: #cafce1 !important;
+  font-weight: bolder;
+}
+
+.menu-label {
+  font-size: 13px;
+}
+.sb-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    z-index: 2000;
+}
+
+@media (min-width: 480px) {
+  .sb-button {
+    display: none;
+}
+}
