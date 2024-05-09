@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    display: flex;
+    width: 100%;
+}
+.sidebar-container{
+    width: 20%;
+    height: 100vh;
+    background-color: #4A6FDC;
+}
+.app-container{
+    width: 80%;
+}

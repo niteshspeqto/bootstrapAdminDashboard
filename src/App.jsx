@@ -1,12 +1,19 @@
-import './App.css'
+import './App.css';
+import Content from './layout/content/Content.jsx';
+import Header from './layout/header/Header.jsx';
+import Sidebar from './layout/sidebar/Sidebar.jsx';
 
-function App() {
+export default function App() {
 
   return (
-    <>
-      hello
-    </>
+        <div className="main-container">
+          <div className="sidebar-container">
+          <Sidebar/>
+          </div>
+          <div className="app-container">
+            <Header/>
+            <Content/>
+          </div>
+        </div>
   )
 }
-
-export default App
