@@ -16,9 +16,11 @@ div.header-container.container{
     padding: 15px;
     font-size: 15px;
     width: 100%;
-    cursor: pointer;
     align-items: center;
     flex-wrap: wrap;
+}
+.header-left Nav , div.nav-item{
+    cursor: pointer;
 }
 .header-right{
     display: flex;
