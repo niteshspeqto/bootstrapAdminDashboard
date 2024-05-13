@@ -12,7 +12,7 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
 import { Button, Form } from "react-bootstrap";
 
-function Header() {
+function Header({ inputText, setInputText }) {
   return (
     <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
       <Container className="header-container">
@@ -25,8 +25,10 @@ function Header() {
                   type="text"
                   placeholder="Search for..."
                   className="mr-sm-2 search-input"
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
                 />
-                <Button variant="primary" className="header-search-icon" >
+                <Button variant="primary" className="header-search-icon">
                   <FontAwesomeIcon
                     icon={faSearch}
                     style={{ color: "#ffffff" }}

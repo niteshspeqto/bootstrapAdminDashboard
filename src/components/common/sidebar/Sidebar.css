@@ -9,13 +9,11 @@
   font-family: "Montserrat", sans-serif !important;
 }
 
-a:hover {
-  color: #0000ff; /* #0ab4ff */
-  font-size: 1.1rem;
+MenuItem:hover{
+  background: transparent;
 }
-
 .menu-anchor:hover {
-  background-color: #cafce1 !important;
+  background-color: red !important;
   font-weight: bolder;
 }
 
@@ -27,11 +25,31 @@ a:hover {
     border: none;
     cursor: pointer;
     margin: 20px;
-    z-index: 2000;
 }
-
+.sidebar{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.submenu-items{
+  background-color: #8fa6e9;
+}
+a.ps-menu-button{
+  flex-wrap: wrap;
+}
+a.ps-menu-button:hover{
+  background: transparent !important;
+}
 @media (min-width: 480px) {
   .sb-button {
     display: none;
+    }
 }
+@media (max-width: 1023px){
+    a.ps-menu-button{
+        display: flex;
+        flex-direction: column;
+    }
+    Menu.Item{
+        margin-bottom: 5px;
+    }
 }

@@ -1,0 +1,32 @@
+.dashboard-card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: red; */
+  /* padding: 20px; */
+}
+.dashboard-card {
+  width: 22%;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 9px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+.dashboard-leftCard {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.dashboard-rightCard {
+  width: 30px;
+  height: 30px;
+}
+.dashboard-card-progress-bar {
+  width: 40%;
+}

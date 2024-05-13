@@ -1,0 +1,36 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 5px rgba(58, 59, 69, 0.15);
+}
+.card-footers {
+  display: flex;
+  justify-content: space-between;
+}
+.card-prices {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.card-img-top {
+  padding: 10px;
+}
+/* .products-img{
+    height: 25vh;
+
+    background-color: rgb(243, 79, 3);
+}
+.products-card-mid{
+    background-color: #f1e6e6;
+    height: 10vh;
+}
+.products-action{
+    height: 10vh;
+    background-color: green;
+} */
